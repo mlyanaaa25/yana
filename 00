@@ -58,13 +58,10 @@
     }
 
     /* --- Profile Section (MODIFIED) --- */
-    .profile {
-      position: relative;
-      margin-bottom: 40px;
-    }
+    .profile {https://gemini.google.com/share/cbb3d13bd02b}
 
     /* Lingkaran latar belakang */
-    .profile-bg {
+     .profile-bg {https://gemini.google.com/share/cbb3d13bd02b
       background: radial-gradient(circle at center, #fff 40%, #ffe6ef 100%);
       border-radius: 50%;
       width: 170px;
