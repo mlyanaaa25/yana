@@ -2,104 +2,199 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yana - Mahasiswa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BunnyChat 🐰 | Teman Lucu Saat Sepi</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
-    /* Reset */
+    /* --- Global Style --- */
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      height: 100vh;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      overflow: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      position: relative;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(180deg, #fff5f9, #ffeaf4);
+      margin: 0;
+      padding: 0;
+      color: #444;
+      overflow-x: hidden;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 20px;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    header {
       text-align: center;
-      z-index: 2;
-      max-width: 360px;
+      padding: 50px 20px 30px;
+      background: url('https://i.ibb.co/GHdL9gZ/pastel-bg.png') repeat;
+      background-size: 250px;
+      border-bottom: 3px solid #ffb6c1;
     }
 
-    .card img {
-      width: 120px;
-      height: 120px;
+    header h1 {
+      font-size: 2.8em;
+      color: #ff69b4;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #fff;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #666;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 50px auto;
+      background: #fffafa;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* --- Profile Section --- */
+    .profile img {
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      border: 3px solid white;
-      object-fit: cover;
-      margin-bottom: 20px;
+      border: 5px solid #ffc1d6;
+      box-shadow: 0 5px 10px rgba(255, 182, 193, 0.4);
+      transition: transform 0.3s ease;
     }
 
-    .card h1 {
-      font-size: 28px;
+    .profile img:hover {
+      transform: scale(1.05);
     }
 
-    .card p {
-      margin: 10px 0;
-      font-size: 18px;
-      color: #e0e0e0;
+    .profile h2 {
+      color: #ff69b4;
+      margin: 20px 0 8px;
+      font-size: 1.8em;
     }
 
-    /* Falling Flowers Effect */
-    .flower {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      background-image: url('https://cdn-icons-png.flaticon.com/512/3203/3203071.png');
-      background-size: cover;
-      opacity: 0.8;
-      animation: fall linear infinite;
+    .profile p {
+      font-size: 1em;
+      color: #777;
     }
 
-    @keyframes fall {
-      0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 0;
+    /* --- Description Section --- */
+    .description {
+      margin-top: 35px;
+      font-size: 1.1em;
+      line-height: 1.8em;
+      color: #555;
+      text-align: justify;
+    }
+
+    .highlight {
+      color: #ff69b4;
+      font-weight: 600;
+    }
+
+    /* --- Call To Action --- */
+    .cta {
+      margin-top: 40px;
+    }
+
+    .cta button {
+      background: linear-gradient(90deg, #ffb6c1, #ffa6c9);
+      border: none;
+      padding: 14px 35px;
+      border-radius: 30px;
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 182, 193, 0.5);
+    }
+
+    .cta button:hover {
+      transform: scale(1.07);
+      background: linear-gradient(90deg, #ff8fb4, #ffb6c1);
+    }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      font-size: 0.9em;
+      color: #777;
+      background-color: #fff0f6;
+      border-top: 2px solid #ffd1dc;
+    }
+
+    footer a {
+      color: #ff69b4;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Responsiveness --- */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
       }
-      100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 1;
+
+      .container {
+        margin: 30px 15px;
+        padding: 25px;
+      }
+
+      .description {
+        text-align: left;
       }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>🐰 BunnyChat</h1>
+    <p>Teman lucu dan hangat untuk menemani hari-harimu yang sepi 💕</p>
+  </header>
 
-  <div class="card">
-    <img src="https://i.pinimg.com/736x/ca/ae/61/caae61528ea1c250b8313e3542306f6a.jpg" alt="Profil Anime" />
-    <h1>Yana</h1>
-    <p><strong>Status:</strong> Mahasiswa</p>
-    <p><strong>Hobi:</strong> Nonton Donghua</p>
-  </div>
+  <main class="container">
+    <section class="profile">
+      <img src="https://i.ibb.co/7GHDLkK/bunny-avatar.png" alt="Liyana Admin BunnyChat" />
+      <h2>Liyana</h2>
+      <p>Admin BunnyChat 🩷 | Mahasiswa yang suka menulis, mendengarkan, dan berbagi semangat 🌷</p>
+    </section>
 
-  <!-- Script to Generate Flowers -->
-  <script>
-    const totalFlowers = 20;
+    <section class="description">
+      <p>
+        Hai! Aku <span class="highlight">Liyana</span> 🐇  
+        Aku tahu, terkadang rasa sepi bisa datang begitu saja — bahkan di tengah keramaian.  
+        Karena itu, aku menciptakan <span class="highlight">BunnyChat</span>: tempat yang hangat, aman, dan menyenangkan untuk bertemu teman baru yang siap mendengar dan berbagi cerita manis bersamamu 💫
+      </p>
+      <p>
+        Di <strong>BunnyChat</strong>, kamu bisa:
+      </p>
+      <ul style="text-align:left; display:inline-block; margin-top:10px; color:#666; line-height:1.8em;">
+        <li>🐰 Bertemu teman baru dengan minat yang sama</li>
+        <li>💬 Berbagi cerita ringan dan lucu</li>
+        <li>🌸 Mengisi harimu dengan obrolan hangat dan dukungan</li>
+        <li>🌷 Merasakan semangat baru setiap hari!</li>
+      </ul>
+      <p style="margin-top:25px;">
+        Jangan biarkan kesepian mengambil senyummu, karena di BunnyChat selalu ada teman untukmu 🐾
+      </p>
+    </section>
 
-    for (let i = 0; i < totalFlowers; i++) {
-      const flower = document.createElement('div');
-      flower.classList.add('flower');
-      flower.style.left = Math.random() * 100 + 'vw';
-      flower.style.animationDuration = 4 + Math.random() * 6 + 's';
-      flower.style.animationDelay = Math.random() * 5 + 's';
-      flower.style.transform = `rotate(${Math.random() * 360}deg)`;
-      document.body.appendChild(flower);
-    }
-  </script>
+    <div class="cta">
+      <button onclick="alert('🌸 Hai dari BunnyChat! Versi aplikasi segera hadir, ya 💖')">
+        🌸 Gabung Sekarang 🌸
+      </button>
+    </div>
+  </main>
 
+  <footer>
+    <p>© 2025 <a href="#">BunnyChat</a> by <strong>Liyana</strong> 🩷 — Semua Hak Dilindungi</p>
+  </footer>
 </body>
 </html>
